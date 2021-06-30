@@ -11,11 +11,7 @@ const mongoose = require('mongoose');
 // jei bus heroku nustatytas portas mes imsime ji is aplinkos kintamuju
 const PORT = process.env.PORT || 5000;
 
-app.use(
-  cors({
-    origin: 'https://mindaugas-is-special-kid.herokuapp.com',
-  })
-);
+app.use(cors());
 // middle ware - to get req.body in json
 app.use(express.json());
 
